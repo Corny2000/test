@@ -59,7 +59,7 @@ house['yes'] = 'no'
 #            house['stop'] = ''
 #        house['link'] = HOUSE_URL
 #        house['pubDate'] = datetime.now()
-scraperwiki.sqlite.save(['link'], house)
+#scraperwiki.sqlite.save(['link'], house)
 
 # You don't have to do things with the ScraperWiki and lxml libraries.
 # You can use whatever libraries you want: https://morph.io/documentation/python
