@@ -29,7 +29,6 @@ house['yes'] = 'no'
 #stopped_phrase = None
         # Check for stop phrases
 #        title = house_tree.xpath('string(//h1[@id="propertytype"])')
-
 #        image_url = tostring(house_tree.xpath('//img[@id="mainphoto"]')[0])
 #        price = house_tree.xpath('string(//div[@id="amount"])')
 #        nearby_stations = house_tree.xpath('string(//div[@id="nearbystations"]/div)')
@@ -58,7 +57,8 @@ house['yes'] = 'no'
 #        else:
 #            house['stop'] = ''
 #        house['link'] = HOUSE_URL
-#        house['pubDate'] = datetime.now()
+house['pubDate'] = datetime.now()
+house['html'] = house_html
 #scraperwiki.sqlite.save(['link'], house)
 scraperwiki.sqlite.save(unique_keys=['name'], data=house)
 
