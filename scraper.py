@@ -61,7 +61,7 @@ house['yes'] = 'no'
 house['pubDate'] = datetime.now()
 house['html'] = house_html
 #scraperwiki.sqlite.save(['link'], house)
-#scraperwiki.sqlite.save(unique_keys=['name'], data=house)
+scraperwiki.sqlite.save(unique_keys=['name'], data=house)
 
 
 # You don't have to do things with the and lxml libraries.
