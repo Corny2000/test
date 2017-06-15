@@ -60,8 +60,10 @@ house['yes'] = 'no'
 #        house['link'] = HOUSE_URL
 #        house['pubDate'] = datetime.now()
 #scraperwiki.sqlite.save(['link'], house)
+scraperwiki.sqlite.save(unique_keys=['name'], data=house)
 
-# You don't have to do things with the ScraperWiki and lxml libraries.
+
+# You don't have to do things with the and lxml libraries.
 # You can use whatever libraries you want: https://morph.io/documentation/python
 # All that matters is that your final data is written to an SQLite database
 # called "data.sqlite" in the current working directory which has at least a table
