@@ -16,14 +16,13 @@ house_html = scraperwiki.scrape("https://www.spareroom.co.uk")
 #
 # # An arbitrary query against the database
 # scraperwiki.sql.select("* from data where 'name'='peter'")
-
-    house_parser = etree.HTMLParser()
-    house_tree = etree.parse(StringIO.StringIO(house_html), house_parser)
+house_parser = etree.HTMLParser()
+house_tree = etree.parse(StringIO.StringIO(house_html), house_parser)
 #    house_text = house_tree.xpath('string(//div[@class="propertyDetailDescription"])')
     # Only look at houses with the word 'views' in the ad text. 
-        house = {}
-    house['yes'] = 'no'
-        stopped_phrase = None
+house = {}
+house['yes'] = 'no'
+#stopped_phrase = None
         # Check for stop phrases
 #        title = house_tree.xpath('string(//h1[@id="propertytype"])')
 
@@ -56,7 +55,7 @@ house_html = scraperwiki.scrape("https://www.spareroom.co.uk")
 #            house['stop'] = ''
 #        house['link'] = HOUSE_URL
 #        house['pubDate'] = datetime.now()
-        scraperwiki.sqlite.save(['link'], house)
+scraperwiki.sqlite.save(['link'], house)
 
 # You don't have to do things with the ScraperWiki and lxml libraries.
 # You can use whatever libraries you want: https://morph.io/documentation/python
