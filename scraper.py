@@ -10,6 +10,7 @@ import StringIO
 #
 # # Read in a page
 house_html = scraperwiki.scrape("https://www.spareroom.co.uk")
+print house_html
 #
 # # Find something on the page using css selectors
 # root = lxml.html.fromstring(html)
