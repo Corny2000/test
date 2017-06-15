@@ -1,8 +1,12 @@
 # This is a template for a Python scraper on morph.io (https://morph.io)
 # including some code snippets below that you should find helpful
 
-import scraperwiki
 import lxml.html
+from lxml import etree
+from lxml.etree import tostring
+from datetime import datetime
+import scraperwiki
+import StringIO
 #
 # # Read in a page
 house_html = scraperwiki.scrape("https://www.spareroom.co.uk")
