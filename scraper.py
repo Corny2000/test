@@ -22,7 +22,8 @@ house_html = scraperwiki.scrape("https://www.spareroom.co.uk")
 # scraperwiki.sql.select("* from data where 'name'='peter'")
 house_parser = etree.HTMLParser()
 house_tree = etree.parse(StringIO.StringIO(house_html), house_parser)
-#    house_text = house_tree.xpath('string(//div[@class="propertyDetailDescription"])')
+#house_text = house_tree.xpath('string(//div[@class="propertyDetailDescription"])')
+house_text = house_tree.xpath('string(//div[@class="above_search_results"])')
     # Only look at houses with the word 'views' in the ad text. 
 house = {}
 house['yes'] = 'no'
